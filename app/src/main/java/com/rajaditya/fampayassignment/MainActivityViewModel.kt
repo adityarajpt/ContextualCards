@@ -23,7 +23,7 @@ class MainActivityViewModel(
     private val _cardsDisabled = MutableStateFlow<List<Int>>(emptyList())
     val cardsDisabled = _cardsDisabled.asStateFlow()
 
-    private lateinit var blockedCards : IntArray
+    private var blockedCards : IntArray
 
     init {
         fetchContextualCards()
@@ -39,7 +39,7 @@ class MainActivityViewModel(
                 _uiState.value = UiState.Loaded(response)
             }
             catch (exception : Exception){
-                _uiState.value = UiState.Error(exception.message)
+                _uiState.value = UiState.Error
             }
         }
     }
@@ -62,7 +62,7 @@ class MainActivityViewModel(
         object Empty : UiState()
         object Loading : UiState()
         class Loaded(val response: ContextualCardsResponse) : UiState()
-        class Error(val message: String?) : UiState()
+        object Error : UiState()
     }
 
     class MainViewModelFactory(private val sharedPreferences: SharedPreferences) : ViewModelProvider.Factory {
