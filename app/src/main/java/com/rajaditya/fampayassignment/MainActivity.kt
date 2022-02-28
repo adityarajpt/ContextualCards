@@ -64,8 +64,8 @@ fun MainScreen(viewModel: MainActivityViewModel) {
                     state.value,
                     cardsDisabled.value,
                     viewModel::fetchContextualCards,
-                    viewModel::temporaryDisableCard,
-                    viewModel::permanentDisableCard
+                    viewModel::temporarilyDisableCard,
+                    viewModel::permanentlyDisableCard
                 )
             }
         },

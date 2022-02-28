@@ -44,13 +44,13 @@ class MainActivityViewModel(
         }
     }
 
-    fun temporaryDisableCard(cardId : Int){
+    fun temporarilyDisableCard(cardId : Int){
         val list = _cardsDisabled.value.toMutableList()
         list.add(cardId)
         _cardsDisabled.value = list
     }
 
-    fun permanentDisableCard(cardId: Int){
+    fun permanentlyDisableCard(cardId: Int){
         val editor = sharedPreferences.edit()
         val list = blockedCards.toMutableList()
         list.add(cardId)
