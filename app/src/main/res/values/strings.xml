@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FampayAssignment</string>
+    <string name="error_message">Error occurred, Tap here to refresh</string>
+</resources>
