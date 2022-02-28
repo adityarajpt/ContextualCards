@@ -8,6 +8,14 @@
     - A `Contextual Card` is used to refer to a view that is rendered using json from an API
     - These views are dynamic and their properties like images, color, texts, buttons (CTAs) etc. can be changed from backend at anytime.
 
+## Screenshots
+<table>
+    <tr>
+      <td><img src="ss1.jpg" height="400px"</img> </td>
+      <td><img src="ss2.jpg" height="400px"</img> </td>
+      <td><img src="ss3.jpg" height="400px"</img> </td>
+    </tr>
+  </table>
 
 ## Architecture
 
@@ -18,3 +26,17 @@ displays the corresponding data on screen.
 Language : Kotlin
 Architecture: Model View ViewModel (MVVM)
 Libraries: Retrofit, StateFlow, ViewModel, Jetpack Compose, Coil, SwiprRefresh, SharedPreference
+
+## Setup Instructions
+
+1. Make sure you've installed Android Studio.
+
+2. Clone this repository in the folder of your preference, and then enter that folder:
+
+```bash
+$ git clone https://github.com/adityarajpt/ContextualCards.git
+$ cd ContextualCards
+```
+3. Go to Tools → AVD Manager and create an emulated device.
+
+4. Run.
