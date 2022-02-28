@@ -8,6 +8,8 @@
     - A `Contextual Card` is used to refer to a view that is rendered using json from an API
     - These views are dynamic and their properties like images, color, texts, buttons (CTAs) etc. can be changed from backend at anytime.
 
+- Contextual Cards View is implement by inheriting `AbstractComposeView`, reason behind this choice is because the AbstractComposeView is great for when we need to promote re-use of composables between Composable UI and the Android UI Toolkit.
+
 ## Screenshots
 <table>
     <tr>
