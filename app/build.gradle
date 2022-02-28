@@ -48,17 +48,23 @@ android {
 }
 
 dependencies {
+
+    //Retrofit
     implementation 'com.google.code.gson:gson:2.8.7'
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    //Lifecycle components and coroutines
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
     implementation "androidx.activity:activity-ktx:1.4.0"
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
     implementation 'androidx.preference:preference-ktx:1.2.0'
 
+    //Compose Libraries - SwiperRefresh, Coil
     implementation "com.google.accompanist:accompanist-swiperefresh:0.19.0"
     implementation "io.coil-kt:coil-compose:1.4.0"
 
+    // Jetpack Compose
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
