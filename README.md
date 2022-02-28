@@ -29,6 +29,9 @@ Language : Kotlin
 Architecture: Model View ViewModel (MVVM)
 Libraries: Retrofit, StateFlow, ViewModel, Jetpack Compose, Coil, SwiprRefresh, SharedPreference
 
+## Install App
+[Install from here](app.apk)
+
 ## Setup Instructions
 
 1. Make sure you've installed Android Studio.
