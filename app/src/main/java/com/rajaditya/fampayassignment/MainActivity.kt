@@ -51,6 +51,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(viewModel: MainActivityViewModel) {
+
+    //These two states are responsible for altering the UI based on change in State or CardDisabled State
     val state = viewModel.uiState.collectAsState()
     val cardsDisabled = viewModel.cardsDisabled.collectAsState()
     Scaffold(

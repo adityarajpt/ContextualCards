@@ -20,9 +20,11 @@ class MainActivityViewModel(
     private val _uiState = MutableStateFlow<UiState>(UiState.Empty)
     val uiState = _uiState.asStateFlow()
 
+    // Contains IDs of Cards which should be hid in this application session
     private val _cardsDisabled = MutableStateFlow<List<Int>>(emptyList())
     val cardsDisabled = _cardsDisabled.asStateFlow()
 
+    // Contains IDs of Cards which should be hid forever
     private var blockedCards : IntArray
 
     init {
@@ -44,12 +46,14 @@ class MainActivityViewModel(
         }
     }
 
+    // Hide the card for this session only
     fun temporarilyDisableCard(cardId : Int){
         val list = _cardsDisabled.value.toMutableList()
         list.add(cardId)
         _cardsDisabled.value = list
     }
 
+    // Hide the card permanently
     fun permanentlyDisableCard(cardId: Int){
         val editor = sharedPreferences.edit()
         val list = blockedCards.toMutableList()
